@@ -1,0 +1,17 @@
+# IDE and OS
+.idea
+.vscode
+.cursor
+.DS_Store
+*.iml
+
+# Build outputs
+target/
+dist/
+node_modules/
+*.log
+
+# Env
+.env
+.env.local
+*.local
