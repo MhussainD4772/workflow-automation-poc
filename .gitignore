@@ -4,14 +4,37 @@
 .cursor
 .DS_Store
 *.iml
+*.iws
+*.ipr
 
 # Build outputs
 target/
 dist/
 node_modules/
 *.log
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# STS / NetBeans
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
 
 # Env
 .env
 .env.local
 *.local
+
+HELP.md
