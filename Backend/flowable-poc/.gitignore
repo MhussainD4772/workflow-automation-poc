@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Studio ###
+.flowset-studio.xml
+
+### Flowable ###
+.flowable
+
+.DS_Store
