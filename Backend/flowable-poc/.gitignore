@@ -38,4 +38,4 @@ build/
 ### Flowable ###
 .flowable
 
-.DS_Store/
+.DS_Store
