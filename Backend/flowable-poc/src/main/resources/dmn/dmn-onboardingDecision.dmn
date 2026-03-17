@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:flowable="http://flowable.org/dmn"
-             xmlns:design="http://flowable.org/design" id="definition_onboardingDecision"
-             name="Onboarding Decision Table" namespace="http://www.flowable.org/dmn">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:flowable="http://flowable.org/dmn" xmlns:design="http://flowable.org/design" id="definition_onboardingDecision" name="Onboarding Decision Table" namespace="http://www.flowable.org/dmn">
   <decision id="onboardingDecision" name="Onboarding Decision Table">
     <decisionTable id="decisionTable_onboardingDecision" hitPolicy="FIRST">
       <input label="citizenship">
@@ -15,53 +11,52 @@
           <text>employmentStatus</text>
         </inputExpression>
       </input>
-      <output id="outputExpression_0c7e46e5-9247-4368-894c-4cb1c6e0b499" label="decisionResult"
-              name="decisionResult" typeRef="string"/>
+      <output id="outputExpression_0c7e46e5-9247-4368-894c-4cb1c6e0b499" label="decisionResult" name="decisionResult" typeRef="string"></output>
       <rule>
         <inputEntry id="inputEntry_1_1">
-          <text>== "citizen"</text>
+          <text><![CDATA[== "citizen"]]></text>
         </inputEntry>
         <inputEntry id="inputEntry_ddc29ee4-28a1-4373-9e5c-45cbfa466294_1">
-          <text>== "employed"</text>
+          <text><![CDATA[== "employed"]]></text>
         </inputEntry>
         <outputEntry id="outputEntry_0c7e46e5-9247-4368-894c-4cb1c6e0b499_1">
-          <text>"citizenFlow"</text>
+          <text><![CDATA["citizenFlow"]]></text>
         </outputEntry>
       </rule>
       <rule>
         <inputEntry id="inputEntry_1_2">
-          <text>== "citizen"</text>
+          <text><![CDATA[== "citizen"]]></text>
         </inputEntry>
         <inputEntry id="inputEntry_ddc29ee4-28a1-4373-9e5c-45cbfa466294_2">
-          <text>== "unemployed"</text>
+          <text><![CDATA[== "unemployed"]]></text>
         </inputEntry>
         <outputEntry id="outputEntry_0c7e46e5-9247-4368-894c-4cb1c6e0b499_2">
-          <text>"citizenVerificationflow"</text>
+          <text><![CDATA["citizenVerificationflow"]]></text>
         </outputEntry>
       </rule>
       <rule>
         <inputEntry id="inputEntry_1_3">
-          <text>== "noncitizen"</text>
+          <text><![CDATA[== "noncitizen"]]></text>
         </inputEntry>
         <inputEntry id="inputEntry_ddc29ee4-28a1-4373-9e5c-45cbfa466294_3">
-          <text>== "employed"</text>
+          <text><![CDATA[== "employed"]]></text>
         </inputEntry>
         <outputEntry id="outputEntry_0c7e46e5-9247-4368-894c-4cb1c6e0b499_3">
-          <text>"passportFlow"</text>
+          <text><![CDATA["passportFlow"]]></text>
         </outputEntry>
       </rule>
       <rule>
         <inputEntry id="inputEntry_1_4">
-          <text>== "noncitizen"</text>
+          <text><![CDATA[== "noncitizen"]]></text>
         </inputEntry>
         <inputEntry id="inputEntry_ddc29ee4-28a1-4373-9e5c-45cbfa466294_4">
-          <text>== "unemployed"</text>
+          <text><![CDATA[== "unemployed"]]></text>
         </inputEntry>
         <outputEntry id="outputEntry_0c7e46e5-9247-4368-894c-4cb1c6e0b499_4">
-          <text>"rejectFlow"</text>
+          <text><![CDATA["rejectFlow"]]></text>
         </outputEntry>
       </rule>
     </decisionTable>
   </decision>
-  <dmndi:DMNDI/>
+  <dmndi:DMNDI></dmndi:DMNDI>
 </definitions>
