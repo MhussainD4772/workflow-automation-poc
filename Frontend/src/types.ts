@@ -14,6 +14,10 @@ export interface OnboardingFormData {
   // Citizen path
   ssn?: string
   state?: string
+  // Citizen verification path
+  idNumber?: string
+  dateOfBirth?: string
+  hasProofOfResidency?: string
   // Non-citizen path
   passportNumber?: string
   visaType?: string

@@ -23,6 +23,9 @@ export function ReviewScreen({ formData, onSubmit, isLoading }: ReviewScreenProp
     formData.employmentStatus != null ||
     formData.ssn != null ||
     formData.state != null ||
+    formData.idNumber != null ||
+    formData.dateOfBirth != null ||
+    formData.hasProofOfResidency != null ||
     formData.passportNumber != null ||
     formData.visaType != null
 
@@ -74,6 +77,24 @@ export function ReviewScreen({ formData, onSubmit, isLoading }: ReviewScreenProp
             <>
               <dt>State</dt>
               <dd>{formData.state}</dd>
+            </>
+          )}
+          {isCitizenPath && formData.idNumber != null && (
+            <>
+              <dt>Government ID number</dt>
+              <dd>{formData.idNumber}</dd>
+            </>
+          )}
+          {isCitizenPath && formData.dateOfBirth != null && (
+            <>
+              <dt>Date of birth</dt>
+              <dd>{formData.dateOfBirth}</dd>
+            </>
+          )}
+          {isCitizenPath && formData.hasProofOfResidency != null && (
+            <>
+              <dt>Has proof of residency</dt>
+              <dd>{formatLabel(formData.hasProofOfResidency)}</dd>
             </>
           )}
           {!isCitizenPath && formData.passportNumber != null && (

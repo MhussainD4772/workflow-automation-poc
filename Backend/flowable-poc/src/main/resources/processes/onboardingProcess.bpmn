@@ -61,6 +61,15 @@
         <design:stencilsuperid><![CDATA[Task]]></design:stencilsuperid>
       </extensionElements>
     </userTask>
+    <userTask id="FormTask_13" flowable:assignee="${initiator}" flowable:formFieldValidation="false">
+      <extensionElements>
+        <flowable:element-name>Citizen Verification
+</flowable:element-name>
+        <flowable:task-candidates-type><![CDATA[all]]></flowable:task-candidates-type>
+        <design:stencilid><![CDATA[FormTask]]></design:stencilid>
+        <design:stencilsuperid><![CDATA[Task]]></design:stencilsuperid>
+      </extensionElements>
+    </userTask>
     <exclusiveGateway id="Exclusive_Databased_Gateway_5" name="Citizen Check">
       <extensionElements>
         <design:stencilid><![CDATA[Exclusive_Databased_Gateway]]></design:stencilid>
@@ -106,6 +115,11 @@
         <design:stencilid><![CDATA[SequenceFlow]]></design:stencilid>
       </extensionElements>
     </sequenceFlow>
+    <sequenceFlow id="SequenceFlow_16" sourceRef="FormTask_13" targetRef="FormTask_11">
+      <extensionElements>
+        <design:stencilid><![CDATA[SequenceFlow]]></design:stencilid>
+      </extensionElements>
+    </sequenceFlow>
     <sequenceFlow id="SequenceFlow_15" sourceRef="FormTask_11" targetRef="EndNoneEvent_14">
       <extensionElements>
         <design:stencilid><![CDATA[SequenceFlow]]></design:stencilid>
@@ -121,6 +135,12 @@
         <design:stencilid><![CDATA[SequenceFlow]]></design:stencilid>
       </extensionElements>
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decisionResult == 'citizenFlow'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="SequenceFlow_35" sourceRef="Exclusive_Databased_Gateway_5" targetRef="FormTask_13">
+      <extensionElements>
+        <design:stencilid><![CDATA[SequenceFlow]]></design:stencilid>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decisionResult == 'citizenVerificationFlow'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="SequenceFlow_10" sourceRef="Exclusive_Databased_Gateway_5" targetRef="FormTask_9">
       <extensionElements>

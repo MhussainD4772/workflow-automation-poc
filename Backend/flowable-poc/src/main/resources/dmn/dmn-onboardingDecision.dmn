@@ -31,7 +31,7 @@
           <text><![CDATA[== "unemployed"]]></text>
         </inputEntry>
         <outputEntry id="outputEntry_0c7e46e5-9247-4368-894c-4cb1c6e0b499_2">
-          <text><![CDATA["citizenFlow"]]></text>
+          <text><![CDATA["citizenVerificationFlow"]]></text>
         </outputEntry>
       </rule>
       <rule>
