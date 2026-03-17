@@ -7,6 +7,7 @@ import {
   BasicInfoForm,
   CitizenDetailsForm,
   NonCitizenDetailsForm,
+  CitizenVerificationForm,
   ReviewScreen,
   RejectedScreen,
   CompletedScreen,
@@ -85,6 +86,9 @@ function App() {
         )}
         {screenKey === SCREEN_KEYS.NON_CITIZEN_DETAILS && (
           <NonCitizenDetailsForm onSubmit={handleSubmitStep} isLoading={isLoading} />
+        )}
+        {screenKey === SCREEN_KEYS.CITIZEN_VERIFICATION && (
+          <CitizenVerificationForm onSubmit={handleSubmitStep} isLoading={isLoading} />
         )}
         {screenKey === SCREEN_KEYS.REVIEW && (
           <ReviewScreen

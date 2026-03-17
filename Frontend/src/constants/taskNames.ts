@@ -7,6 +7,7 @@ export const TASK = {
   COLLECT_BASIC_INFO: 'Collect Basic Info',
   COLLECT_CITIZEN_DETAILS: 'Collect Citizen Details',
   COLLECT_NON_CITIZEN_DETAILS: 'Collect Non-Citizen Details',
+  CITIZEN_VERIFICATION: 'Citizen Verification',
   REVIEW_APPLICATION: 'Review Application',
   APPLICATION_REJECTED: 'Application Rejected',
   PROCESS_COMPLETED: 'Process completed',
