@@ -1,0 +1,22 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Commit and push
+        run: |
+          git config user.name "MhussainD4772"
+          git config user.email "mohammedjoe53@gmail.com"
+          git commit --allow-empty -m "chore: daily ping $(date -u +%F)"
+          git push
